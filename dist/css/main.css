@@ -422,4 +422,126 @@ header {
   font-family: 'SourceSansPro-ExtraLight';
   font-size: 3rem;
 }
+
+.kontakt {
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.kontakt__header {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.kontakt__header h2 {
+  font-family: 'SourceSansPro-Regular';
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.kontakt__header p {
+  padding: 5px;
+  font-family: 'SourceSansPro-ExtraLight';
+  font-size: 1.5rem;
+}
+
+.kontakt__header a {
+  font-family: 'SourceSansPro-Light';
+  color: #000;
+  font-size: 1.2rem;
+  margin-top: 5vh;
+  width: 140px;
+  margin: 50px auto;
+  padding: 10px;
+  border: 2px solid #47bcc3;
+}
+
+.kontakt__icons {
+  height: 50%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  font-family: 'SourceSansPro-ExtraLight';
+  font-size: 1.2rem;
+  padding-top: 50px;
+}
+
+.kontakt__icons .kontakt__phone {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-right: 50px;
+}
+
+.kontakt__icons .kontakt__phone img {
+  width: 100px;
+  height: 100px;
+}
+
+.kontakt__icons .kontakt__phone p {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.kontakt__icons .kontakt__mail {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 50px;
+}
+
+.kontakt__icons .kontakt__mail img {
+  width: 120px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.kontakt__icons .kontakt__mail p {
+  padding-top: 20px;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */
