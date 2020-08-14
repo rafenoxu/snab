@@ -158,6 +158,10 @@ header {
   display: flex;
 }
 
+.menu-nav__item.active a::after {
+  width: 1rem;
+}
+
 .menu-nav__item {
   padding: 0 2vw;
 }
@@ -180,7 +184,7 @@ header {
   top: 5px;
 }
 
-.menu-nav__item.active a::after {
+.menu-nav__item a:hover::after {
   width: 2rem;
 }
 
@@ -575,6 +579,12 @@ footer .footer__text a {
   color: white;
   padding: 10px;
   font-family: 'SourceSansPro-Light';
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .footer__text a:hover {
+  color: #47bcc3;
 }
 
 footer .footer__social-media-icons {
@@ -590,6 +600,8 @@ footer .footer__social-media-icons .hexagon {
   text-align: center;
   position: relative;
   margin: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 footer .footer__social-media-icons .hexagon:before {
@@ -602,6 +614,8 @@ footer .footer__social-media-icons .hexagon:before {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 7px solid #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 footer .footer__social-media-icons .hexagon:after {
@@ -614,10 +628,24 @@ footer .footer__social-media-icons .hexagon:after {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-top: 7px solid #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 footer .footer__social-media-icons a {
   color: #000;
   font-size: 17px;
+}
+
+footer .footer__social-media-icons .hexagon:hover {
+  background: #47bcc3;
+}
+
+footer .footer__social-media-icons .hexagon:hover:after {
+  border-top: 7px solid #47bcc3;
+}
+
+footer .footer__social-media-icons .hexagon:hover:before {
+  border-bottom: 7px solid #47bcc3;
 }
 /*# sourceMappingURL=main.css.map */

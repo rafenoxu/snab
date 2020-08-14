@@ -18,6 +18,11 @@ footer {
             color: white;
             padding: 10px;
             font-family: 'SourceSansPro-Light';
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: $secondary-color;
         }
     }
 
@@ -31,6 +36,7 @@ footer {
             text-align: center;
             position: relative;
             margin: 20px;
+            transition: all 0.3s ease-in-out;
         }
 
         .hexagon:before {
@@ -43,6 +49,7 @@ footer {
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
             border-bottom: 7px solid #fff;
+            transition: all 0.3s ease-in-out;
         }
 
         .hexagon:after {
@@ -55,11 +62,24 @@ footer {
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
             border-top: 7px solid #fff;
+            transition: all 0.3s ease-in-out;
         }
 
         a {
             color: $primary-color;
             font-size: 17px;
+        }
+
+        .hexagon:hover{
+            background: $secondary-color;
+        }
+          
+        .hexagon:hover:after {
+            border-top: 7px solid $secondary-color;
+        }
+        
+        .hexagon:hover:before {
+            border-bottom: 7px solid $secondary-color;
         }
     }
 
