@@ -240,7 +240,7 @@ header {
   rotate: 30deg;
   width: 100px;
   height: 100px;
-  margin-top: 5vh;
+  margin-top: 7vh;
   overflow: hidden;
 }
 
@@ -293,6 +293,86 @@ header {
   padding-top: 1rem;
   font-size: 1.5rem;
   font-family: 'SourceSansPro-Light';
+}
+
+.case-study__text .view-case-study {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.case-study__text .view-case-study .right-arrow {
+  position: relative;
+  left: 70px;
+}
+
+.case-study__text .view-case-study .left-arrow {
+  rotate: 180deg;
+}
+
+.case-study__text .case-study-circle-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #47bcc3;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  overflow: visible;
+  margin: 5vh 0;
+}
+
+.case-study__text .case-study-circle-right a {
+  width: 140px;
+  position: relative;
+  left: 20px;
+  font-family: 'SourceSansPro-Light';
+  color: #000;
+  font-size: 1.2rem;
+  background-color: #f9f9f9;
+  padding: 8px;
+}
+
+.case-study__text .case-study-circle-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #47bcc3;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  overflow: visible;
+  margin: 5vh 0 5vh 70px;
+}
+
+.case-study__text .case-study-circle-left a {
+  width: 140px;
+  position: relative;
+  right: 70px;
+  font-family: 'SourceSansPro-Light';
+  color: #000;
+  font-size: 1.2rem;
+  background-color: #f9f9f9;
+  padding: 8px;
 }
 
 .case-study__image {
