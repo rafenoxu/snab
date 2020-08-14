@@ -1,0 +1,49 @@
+.about {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    align-content: center;
+    height: calc(100vh - 150px);
+
+    &__content {
+        grid-column: 2 / 3;
+        font-family: 'SourceSansPro-Light';
+
+        h2 {
+            font-size: 4rem;
+            display: block;
+            padding: 10px;
+            line-height: 1.5;
+
+            .typed {
+                color: #47bcc3;
+                font-family: 'SourceSansPro-Bold';
+            }
+        }
+
+        p {
+            display: block;
+            padding: 10px;
+            line-height: 1.5;
+            font-size: 1.5rem;
+        }
+
+        .arrow-down-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 2px solid #47bcc3;
+            border-radius: 50%;
+            border-top-color: transparent;
+            rotate: 30deg;
+            width: 100px;
+            height: 100px;
+            margin-top: 5vh;
+            overflow: hidden;
+
+            img {
+                rotate: -30deg;
+            }
+        }
+    }
+}
