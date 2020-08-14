@@ -25,7 +25,7 @@ header {
 
     &__item.active {
         a::after {
-            width: 1rem;
+            width: 40%;
         }
     }
 
@@ -50,9 +50,7 @@ header {
         }
 
         a:hover::after {
-            width: 2rem;
+            width: 80%;
         }
     }
 }
-
-

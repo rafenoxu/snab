@@ -159,7 +159,7 @@ header {
 }
 
 .menu-nav__item.active a::after {
-  width: 1rem;
+  width: 40%;
 }
 
 .menu-nav__item {
@@ -185,7 +185,7 @@ header {
 }
 
 .menu-nav__item a:hover::after {
-  width: 2rem;
+  width: 80%;
 }
 
 .about {
