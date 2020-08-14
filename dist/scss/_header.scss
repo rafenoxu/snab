@@ -1,0 +1,54 @@
+$header-height: 150px;
+$menu-link-size: 20px;
+
+header {
+    height: $header-height;
+    width: 100%;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 203px;
+    height: 39px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.menu-nav {
+    display: flex;
+
+    &__item {
+        padding: 0 2vw;
+
+        a {
+            color: $primary-color;
+            font-size: $menu-link-size;
+            font-family: 'SourceSansPro-ExtraLight';
+        }
+
+        a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 5px;
+            background: $secondary-color;
+            transition: width .3s;
+            position: relative;
+            top: 5px;
+        }
+    }
+
+    &__item.active {
+        a::after {
+            width: 2rem;
+        }
+    }
+}
+
+

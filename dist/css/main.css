@@ -1,0 +1,330 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  line-height: 1;
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Black';
+  src: url("../fonts/SourceSansPro-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-BlackIt';
+  src: url("../fonts/SourceSansPro-BlackIt.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Bold';
+  src: url("../fonts/SourceSansPro-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-BoldIt';
+  src: url("../fonts/SourceSansPro-BoldIt.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-ExtraLight';
+  src: url("../fonts/SourceSansPro-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-ExtraLightIt';
+  src: url("../fonts/SourceSansPro-ExtraLightIt.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-It';
+  src: url("../fonts/SourceSansPro-It.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Light';
+  src: url("../fonts/SourceSansPro-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-LightIt';
+  src: url("../fonts/SourceSansPro-LightIt.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Regular';
+  src: url("../fonts/SourceSansPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Semibold';
+  src: url("../fonts/SourceSansPro-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SourceSansPro-SemiboldIt';
+  src: url("../fonts/SourceSansPro-SemiboldIt.otf") format("opentype");
+}
+
+header {
+  height: 150px;
+  width: 100%;
+  padding: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  width: 203px;
+  height: 39px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-nav__item {
+  padding: 0 2vw;
+}
+
+.menu-nav__item a {
+  color: #000;
+  font-size: 20px;
+  font-family: 'SourceSansPro-ExtraLight';
+}
+
+.menu-nav__item a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 5px;
+  background: #47bcc3;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+  position: relative;
+  top: 5px;
+}
+
+.menu-nav__item.active a::after {
+  width: 2rem;
+}
+
+.about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% auto 20%;
+      grid-template-columns: 20% auto 20%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: calc(100vh - 150px);
+}
+
+.about__content {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  font-family: 'SourceSansPro-Light';
+}
+
+.about__content h2 {
+  font-size: 4rem;
+  display: block;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.about__content h2 .typed {
+  color: #47bcc3;
+  font-family: 'SourceSansPro-Bold';
+}
+
+.about__content p {
+  display: block;
+  padding: 10px;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.about .arrow-down-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #47bcc3;
+  border-radius: 50%;
+  border-top-color: transparent;
+  rotate: 30deg;
+  width: 100px;
+  height: 100px;
+  margin-top: 5vh;
+}
+
+.about .arrow-down-circle img {
+  rotate: -30deg;
+}
+
+.case-study {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% auto 20%;
+      grid-template-columns: 20% auto 20%;
+  background-color: #f9f9f9;
+}
+
+.case-study__content {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px 0px;
+}
+
+.case-study__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+}
+
+.case-study__text h2 {
+  display: block;
+  padding: 10px;
+  line-height: 1.5;
+  padding-bottom: 0px;
+  font-weight: font-weight(bold);
+  font-size: font-size(large);
+}
+
+.case-study__text h3 {
+  padding: 0px 10px;
+  font-weight: font-weight(bold);
+  padding-bottom: 10px;
+}
+
+.case-study__text p {
+  display: block;
+  padding: 10px;
+  line-height: 1.5;
+  font-weight: font-weight(small);
+}
+
+.case-study__text img {
+  rotate: -90deg;
+}
+
+.case-study__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.case-study__image img {
+  height: 80%;
+}
+/*# sourceMappingURL=main.css.map */
