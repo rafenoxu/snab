@@ -544,4 +544,80 @@ header {
   padding-top: 20px;
   text-align: center;
 }
+
+footer {
+  min-height: 200px;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer > * {
+  margin: 50px;
+}
+
+footer .footer__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer__text a {
+  color: white;
+  padding: 10px;
+  font-family: 'SourceSansPro-Light';
+}
+
+footer .footer__social-media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer__social-media-icons .hexagon {
+  width: 30px;
+  height: 20px;
+  background: #fff;
+  text-align: center;
+  position: relative;
+  margin: 20px;
+}
+
+footer .footer__social-media-icons .hexagon:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 7px solid #fff;
+}
+
+footer .footer__social-media-icons .hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 7px solid #fff;
+}
+
+footer .footer__social-media-icons a {
+  color: #000;
+  font-size: 17px;
+}
 /*# sourceMappingURL=main.css.map */
