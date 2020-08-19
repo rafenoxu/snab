@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -207,9 +208,16 @@ header {
 
 .about__content h2 {
   font-size: 4rem;
-  display: block;
   padding: 10px;
   line-height: 1.5;
+}
+
+.about__content h2 .hidden::after {
+  content: '';
+}
+
+.about__content h2 .difference::after {
+  content: 'różnica';
 }
 
 .about__content h2 .typed {
@@ -217,8 +225,70 @@ header {
   font-family: 'SourceSansPro-Bold';
 }
 
+.about__content h2:hover {
+  text-transform: lowercase;
+}
+
+.about__content h2:hover .hidden::after {
+  -webkit-animation: changetext 2s;
+          animation: changetext 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  text-transform: initial;
+}
+
+.about__content h2:hover .difference::after {
+  -webkit-animation: changeDiff 2s;
+          animation: changeDiff 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes changeDiff {
+  0% {
+    content: 'przewaga';
+    opacity: 0;
+  }
+  100% {
+    content: 'przewaga';
+    opacity: 1;
+  }
+}
+
+@keyframes changeDiff {
+  0% {
+    content: 'przewaga';
+    opacity: 0;
+  }
+  100% {
+    content: 'przewaga';
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes changetext {
+  0% {
+    content: 'Z nami ';
+    opacity: 0;
+  }
+  100% {
+    content: 'Z nami ';
+    opacity: 1;
+  }
+}
+
+@keyframes changetext {
+  0% {
+    content: 'Z nami ';
+    opacity: 0;
+  }
+  100% {
+    content: 'Z nami ';
+    opacity: 1;
+  }
+}
+
 .about__content p {
-  display: block;
   padding: 10px;
   line-height: 1.5;
   font-size: 1.5rem;

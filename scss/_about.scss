@@ -10,18 +10,61 @@
 
         h2 {
             font-size: 4rem;
-            display: block;
             padding: 10px;
             line-height: 1.5;
 
+            .hidden::after {
+                content: '';
+            }
+
+            .difference::after {
+                content: 'różnica';
+            }
+            
             .typed {
                 color: #47bcc3;
                 font-family: 'SourceSansPro-Bold';
             }
         }
 
+        h2:hover {
+            text-transform: lowercase;
+
+            .hidden::after {
+                animation: changetext 2s;
+                animation-fill-mode: forwards;
+                text-transform: initial;
+            }
+
+            .difference::after {
+                animation: changeDiff 2s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        @keyframes changeDiff {
+            0% {
+                content: 'przewaga';
+                opacity: 0;
+            }
+            100% {
+                content: 'przewaga';
+                opacity: 1;
+            }
+        }
+
+        @keyframes changetext {
+            0% {
+                content: 'Z nami ';
+                opacity: 0;
+            }
+            100% {
+                content: 'Z nami ';
+                opacity: 1;
+            }
+        }
+
         p {
-            display: block;
             padding: 10px;
             line-height: 1.5;
             font-size: 1.5rem;
