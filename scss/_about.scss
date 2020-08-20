@@ -13,54 +13,9 @@
             padding: 10px;
             line-height: 1.5;
 
-            .hidden::after {
-                content: '';
-            }
-
-            .difference::after {
-                content: 'różnica';
-            }
-            
             .typed {
                 color: #47bcc3;
                 font-family: 'SourceSansPro-Bold';
-            }
-        }
-
-        h2:hover {
-            text-transform: lowercase;
-
-            .hidden::after {
-                animation: changetext 2s;
-                animation-fill-mode: forwards;
-                text-transform: initial;
-            }
-
-            .difference::after {
-                animation: changeDiff 2s;
-                animation-fill-mode: forwards;
-            }
-        }
-
-        @keyframes changeDiff {
-            0% {
-                content: 'przewaga';
-                opacity: 0;
-            }
-            100% {
-                content: 'przewaga';
-                opacity: 1;
-            }
-        }
-
-        @keyframes changetext {
-            0% {
-                content: 'Z nami ';
-                opacity: 0;
-            }
-            100% {
-                content: 'Z nami ';
-                opacity: 1;
             }
         }
 
@@ -78,14 +33,33 @@
             border: 2px solid #47bcc3;
             border-radius: 50%;
             border-top-color: transparent;
-            rotate: 30deg;
             width: 100px;
             height: 100px;
             margin-top: 7vh;
-            overflow: hidden;
+        }
+
+        .arrow-down-circle:hover {
+            animation: spin 1s forwards;
 
             img {
-                rotate: -30deg;
+                rotate: 180deg;
+                transition: rotate 1s ease-in-out;
+                animation: 1s move-down 1s forwards;
+            }
+
+            @keyframes spin {
+                from {transform:rotate(0deg);}
+                to {transform:rotate(180deg);}
+            }
+    
+            @keyframes spin-back {
+                from {transform:rotate(0deg);}
+                to {transform:rotate(-180deg);}
+            }
+
+            @keyframes move-down {
+                from {transform: translateY(0);}
+                to {transform: translateY(35px);}
             }
         }
     }

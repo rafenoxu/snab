@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -212,80 +211,9 @@ header {
   line-height: 1.5;
 }
 
-.about__content h2 .hidden::after {
-  content: '';
-}
-
-.about__content h2 .difference::after {
-  content: 'różnica';
-}
-
 .about__content h2 .typed {
   color: #47bcc3;
   font-family: 'SourceSansPro-Bold';
-}
-
-.about__content h2:hover {
-  text-transform: lowercase;
-}
-
-.about__content h2:hover .hidden::after {
-  -webkit-animation: changetext 2s;
-          animation: changetext 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  text-transform: initial;
-}
-
-.about__content h2:hover .difference::after {
-  -webkit-animation: changeDiff 2s;
-          animation: changeDiff 2s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes changeDiff {
-  0% {
-    content: 'przewaga';
-    opacity: 0;
-  }
-  100% {
-    content: 'przewaga';
-    opacity: 1;
-  }
-}
-
-@keyframes changeDiff {
-  0% {
-    content: 'przewaga';
-    opacity: 0;
-  }
-  100% {
-    content: 'przewaga';
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes changetext {
-  0% {
-    content: 'Z nami ';
-    opacity: 0;
-  }
-  100% {
-    content: 'Z nami ';
-    opacity: 1;
-  }
-}
-
-@keyframes changetext {
-  0% {
-    content: 'Z nami ';
-    opacity: 0;
-  }
-  100% {
-    content: 'Z nami ';
-    opacity: 1;
-  }
 }
 
 .about__content p {
@@ -311,15 +239,88 @@ header {
   border: 2px solid #47bcc3;
   border-radius: 50%;
   border-top-color: transparent;
-  rotate: 30deg;
   width: 100px;
   height: 100px;
   margin-top: 7vh;
-  overflow: hidden;
 }
 
-.about__content .arrow-down-circle img {
-  rotate: -30deg;
+.about__content .arrow-down-circle:hover {
+  -webkit-animation: spin 1s forwards;
+          animation: spin 1s forwards;
+}
+
+.about__content .arrow-down-circle:hover img {
+  rotate: 180deg;
+  -webkit-transition: rotate 1s ease-in-out;
+  transition: rotate 1s ease-in-out;
+  -webkit-animation: 1s move-down 1s forwards;
+          animation: 1s move-down 1s forwards;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes spin-back {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
+@keyframes spin-back {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
+@-webkit-keyframes move-down {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px);
+  }
+}
+
+@keyframes move-down {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px);
+  }
 }
 
 .case-study {
