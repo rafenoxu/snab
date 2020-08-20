@@ -31,64 +31,152 @@
         font-family: 'SourceSansPro-Light';
     }
 
-    .view-case-study {
+    a {
         display: flex;
+        flex-direction: row;
         align-items: center;
-        align-content: center;
 
-        .right-arrow {
-            position: relative;
-            left: 70px;
-        }
-
-        .left-arrow {
-            rotate: 180deg;
+        p {
+            margin-bottom: 18px;
+            margin-left: 10px;
         }
     }
 
-    .case-study-circle-right {
+    .case-study-circle {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
         border: 2px solid #47bcc3;
         border-radius: 50%;
-        width: 85px;
-        height: 85px;
-        overflow: visible;
-        margin: 5vh 0;
+        border-left-color: transparent;
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
 
-        a {
-            width: 140px;
-            position: relative;
-            left: 20px;
-            font-family: 'SourceSansPro-Light';
-            color: $primary-color;
-            font-size: 1.2rem;
-            background-color: #f9f9f9;
-            padding: 8px;
+        &__text {
+            white-space: nowrap;
+
+            p {
+                position: relative;
+                top: 20px;
+                left: 40px;
+                color: black;
+            }
+        }
+
+        &__arrow {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: visible;
+        }
+    }
+
+    .case-study-circle:hover {
+        animation: spin 1s forwards;
+
+        @keyframes spin {
+            from {transform:rotate(0deg);}
+            to {transform:rotate(180deg);}
+        }
+
+        .case-study-circle__arrow {
+            rotate: -180deg;
+            transition: rotate 1s;
+            animation: 1s move-right 1s forwards;
+        }
+
+        .case-study-circle__text {
+            rotate: -180deg;
+            transition: rotate 1s;
+            animation: text-right 2s forwards;
+        }
+
+        @keyframes move-right {
+            from {transform: translateX(0);}
+            to {transform: translateX(150px);}
+        }
+
+        @keyframes text-right {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+                transform: translateX(0);
+            }
+            100% {
+                opacity: 100;
+                transform: translateX(100px);
+            }
         }
     }
 
     .case-study-circle-left {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
         border: 2px solid #47bcc3;
         border-radius: 50%;
-        width: 85px;
-        height: 85px;
-        overflow: visible;
-        margin: 5vh 0 5vh 70px;
+        border-right-color: transparent;
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
 
-        a {
-            width: 140px;
-            position: relative;
-            right: 70px;
-            font-family: 'SourceSansPro-Light';
-            color: $primary-color;
-            font-size: 1.2rem;
-            background-color: #f9f9f9;
-            padding: 8px;
+        &__text {
+            white-space: nowrap;
+
+            p {
+                position: relative;
+                top: 20px;
+                left: 40px;
+                color: black;
+            }
+        }
+
+        &__arrow {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: visible;
+        }
+    }
+
+    .case-study-circle-left:hover {
+        animation: spin 1s forwards;
+
+        @keyframes spin {
+            from {transform:rotate(0deg);}
+            to {transform:rotate(180deg);}
+        }
+
+        .case-study-circle-left__arrow {
+            rotate: -180deg;
+            transition: rotate 1s;
+            animation: 1s move-right 1s forwards;
+        }
+
+        .case-study-circle-left__text {
+            rotate: -180deg;
+            transition: rotate 1s;
+            animation: text-right 2s forwards;
+        }
+
+        @keyframes move-right {
+            from {transform: translateX(0);}
+            to {transform: translateX(150px);}
+        }
+
+        @keyframes text-right {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+                transform: translateX(0);
+            }
+            100% {
+                opacity: 100;
+                transform: translateX(100px);
+            }
         }
     }
 }
