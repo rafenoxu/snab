@@ -1,5 +1,7 @@
 var largeTyped = new Typed('.typed-container', {
-    strings:["olbrzymia"],
-    typeSpeed: 80,
-    startDelay: 500
+    strings:["olbrzymia", "znaczna", "spora", "masywna"],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true,
+    loopCount: Infinity
 });
