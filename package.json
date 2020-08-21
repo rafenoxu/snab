@@ -1,8 +1,8 @@
 {
-  "name": "Snabel",
+  "name": "snabel",
   "version": "1.0.0",
   "description": "",
-  "main": "typed_text.js",
+  "main": "index.js",
   "dependencies": {
     "typed.js": "^2.0.11"
   },
