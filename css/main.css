@@ -597,7 +597,7 @@ header {
   font-size: 3rem;
 }
 
-.kontakt {
+.contact {
   background-color: #f9f9f9;
   width: 100%;
   height: 80vh;
@@ -613,7 +613,7 @@ header {
           align-items: center;
 }
 
-.kontakt__header {
+.contact__header {
   height: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -628,19 +628,19 @@ header {
   text-align: center;
 }
 
-.kontakt__header h2 {
+.contact__header h2 {
   font-family: 'SourceSansPro-Regular';
   font-size: 4rem;
   font-weight: bolder;
 }
 
-.kontakt__header p {
+.contact__header p {
   padding: 5px;
   font-family: 'SourceSansPro-ExtraLight';
   font-size: 1.5rem;
 }
 
-.kontakt__header a {
+.contact__header a {
   font-family: 'SourceSansPro-Light';
   color: #000;
   font-size: 1.2rem;
@@ -651,7 +651,7 @@ header {
   border: 2px solid #47bcc3;
 }
 
-.kontakt__icons {
+.contact__icons {
   height: 50%;
   width: 80%;
   display: -webkit-box;
@@ -667,7 +667,7 @@ header {
   padding-top: 50px;
 }
 
-.kontakt__icons .kontakt__phone {
+.contact__icons .contact__phone {
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -682,17 +682,17 @@ header {
   margin-right: 50px;
 }
 
-.kontakt__icons .kontakt__phone img {
+.contact__icons .contact__phone img {
   width: 100px;
   height: 100px;
 }
 
-.kontakt__icons .kontakt__phone p {
+.contact__icons .contact__phone p {
   padding-top: 20px;
   text-align: center;
 }
 
-.kontakt__icons .kontakt__mail {
+.contact__icons .contact__mail {
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -707,14 +707,14 @@ header {
   margin-left: 50px;
 }
 
-.kontakt__icons .kontakt__mail img {
+.contact__icons .contact__mail img {
   width: 120px;
   height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.kontakt__icons .kontakt__mail p {
+.contact__icons .contact__mail p {
   padding-top: 20px;
   text-align: center;
 }
