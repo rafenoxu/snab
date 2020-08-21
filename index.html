@@ -7,18 +7,24 @@
 
     <script defer src="node_modules/typed.js/lib/typed.min.js"></script>
     <script defer src="js/typed_text.js"></script>
+    <script defer src="js/navbar.js"></script>
     <script defer src=https://use.fontawesome.com/08968d63bb.js></script>
 
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <main>
-        <header>
+        <header class="navbar">
             <div class="logo">
                 <a href="index.html">
                     <img src="images/logo_snabel.png" alt="logo">
                 </a>
             </div>
+            <button class=menu-toggle aria-label="Open navigation menu" type=button>
+                <span class=icon-bar></span>
+                <span class=icon-bar></span>
+                <span class=icon-bar></span>
+            </button>
             <nav class="nav">
                 <ul class="menu-nav">
                     <li class="menu-nav__item active">
@@ -124,7 +130,14 @@
                 <div class="contact__header">
                     <h2>Chcesz się spotkać?</h2>
                     <p>Zmienimy Twój pomysł w innowacyjny pomysł! Masło maślane!</p>
-                    <a href="#">zacznij projekt</a>
+                    <a href="#">
+                        <div class="svg-wrapper">
+                            <svg height="60" width="260" xmlns="http://www.w3.org/2000/svg">
+                              <rect class="shape" height="60" width="260" />
+                              <div class="text">zacznij projekt</div>
+                            </svg>
+                        </div> 
+                    </a>
                 </div>
                 <div class="contact__icons">
                     <div class="contact__phone">
