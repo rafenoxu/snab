@@ -30,11 +30,33 @@
             color: $primary-color;
             font-size: 1.2rem;
             margin-top: 5vh;
-            
-            width: 140px;
             margin: 50px auto;
             padding: 10px;
-            border: 2px solid $secondary-color;
+              
+            .shape {
+                stroke-dasharray: 140 540;
+                stroke-dashoffset: -474;
+                stroke-width: 12px;
+                fill: transparent;
+                stroke: $secondary-color;
+                border-bottom: 5px solid $secondary-color;
+                transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+            }
+            
+            .text {
+                font-size: 22px;
+                line-height: 32px;
+                color: $primary-color;
+                top: -48px;
+                position: relative;
+            }
+            
+            .svg-wrapper:hover .shape {
+                stroke-width: 4px;
+                stroke-dashoffset: 0;
+                stroke-dasharray: 760;
+            }
+              
         }
     }
 
