@@ -1,0 +1,138 @@
+.case-study-circle {
+    display: flex;
+    border: 2px solid #47bcc3;
+    border-radius: 50%;
+    border-left-color: transparent;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+
+    &__text {
+        white-space: nowrap;
+
+        p {
+            position: relative;
+            top: 20px;
+            left: 40px;
+            color: black;
+        }
+    }
+
+    &__arrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: visible;
+    }
+}
+
+.case-study-circle:hover {
+    animation: spin 1s forwards;
+
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(180deg);}
+    }
+
+    .case-study-circle__arrow {
+        rotate: -180deg;
+        transition: rotate 1s;
+        animation: 1s move-right 1s forwards;
+    }
+
+    .case-study-circle__text {
+        rotate: -180deg;
+        transition: rotate 1s;
+        animation: text-right 2s forwards;
+    }
+
+    @keyframes move-right {
+        from {transform: translateX(0);}
+        to {transform: translateX(150px);}
+    }
+
+    @keyframes text-right {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
+            transform: translateX(0);
+        }
+        100% {
+            opacity: 100;
+            transform: translateX(100px);
+        }
+    }
+}
+
+.case-study-circle-left {
+    display: flex;
+    border: 2px solid #47bcc3;
+    border-radius: 50%;
+    border-right-color: transparent;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+
+    &__text {
+        white-space: nowrap;
+
+        p {
+            font-family: 'SourceSansPro-Light';
+            position: relative;
+            top: 18px;
+            left: -240px;
+            color: black;
+        }
+    }
+
+    &__arrow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: visible;
+        position: relative;
+        left: 35px;
+    }
+}
+
+.case-study-circle-left:hover {
+    animation: spin 1s forwards;
+
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(-180deg);}
+    }
+
+    .case-study-circle-left__arrow {
+        rotate: -180deg;
+        transition: rotate 1s;
+        animation: 1s move-left 1s forwards;
+    }
+
+    .case-study-circle-left__text {
+        rotate: -180deg;
+        transition: rotate 1s;
+        animation: text-left 2s forwards;
+    }
+
+    @keyframes move-left {
+        from {transform: translateX(0);}
+        to {transform: translateX(-150px);}
+    }
+
+    @keyframes text-left {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
+            transform: translateX(350px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(280px);
+        }
+    }
+}

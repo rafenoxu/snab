@@ -1,225 +1,110 @@
 .case-study {
-    display: grid;
-    grid-template-columns: 20% auto 20%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
     background-color: #f9f9f9;
-    width: 100%;
+    max-width: 100%;
+    padding: 2%;
 }
   
 .case-study__content {
-    grid-column: 2 / 3;
-    display: flex;
-}
-  
-.case-study__text {
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    font-family: 'SourceSansPro-Bold';
-    overflow: hidden;
-
-    h2 {
-        font-size: 4rem;
-    }
-
-    h3 {
-        padding-top: 5px;
-        font-size: 1.5rem;
-
-    }
-
-    p {
-        padding-top: 1rem;
-        font-size: 1.5rem;
-        font-family: 'SourceSansPro-Light';
-    }
-
-    a {
-        display: flex;
-        align-items: center;
-
-        p {
-            margin-bottom: 18px;
-            margin-left: 10px;
-        }
-    }
-
-    a.left {
-        justify-content: end;
-    }
-
-    .case-study-circle {
-        display: flex;
-        border: 2px solid #47bcc3;
-        border-radius: 50%;
-        border-left-color: transparent;
-        width: 100px;
-        height: 100px;
-        margin-top: 50px;
-
-        &__text {
-            white-space: nowrap;
-
-            p {
-                position: relative;
-                top: 20px;
-                left: 40px;
-                color: black;
-            }
-        }
-
-        &__arrow {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: visible;
-        }
-    }
-
-    .case-study-circle:hover {
-        animation: spin 1s forwards;
-
-        @keyframes spin {
-            from {transform:rotate(0deg);}
-            to {transform:rotate(180deg);}
-        }
-
-        .case-study-circle__arrow {
-            rotate: -180deg;
-            transition: rotate 1s;
-            animation: 1s move-right 1s forwards;
-        }
-
-        .case-study-circle__text {
-            rotate: -180deg;
-            transition: rotate 1s;
-            animation: text-right 2s forwards;
-        }
-
-        @keyframes move-right {
-            from {transform: translateX(0);}
-            to {transform: translateX(150px);}
-        }
-
-        @keyframes text-right {
-            0% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 0;
-                transform: translateX(0);
-            }
-            100% {
-                opacity: 100;
-                transform: translateX(100px);
-            }
-        }
-    }
-
-    .case-study-circle-left {
-        display: flex;
-        border: 2px solid #47bcc3;
-        border-radius: 50%;
-        border-right-color: transparent;
-        width: 100px;
-        height: 100px;
-        margin-top: 50px;
-
-        &__text {
-            white-space: nowrap;
-
-            p {
-                position: relative;
-                top: 20px;
-                left: -250px;
-                color: black;
-            }
-        }
-
-        &__arrow {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: visible;
-            position: relative;
-            left: 40px;
-        }
-    }
-
-    .case-study-circle-left:hover {
-        animation: spin 1s forwards;
-
-        @keyframes spin {
-            from {transform:rotate(0deg);}
-            to {transform:rotate(-180deg);}
-        }
-
-        .case-study-circle-left__arrow {
-            rotate: -180deg;
-            transition: rotate 1s;
-            animation: 1s move-left 1s forwards;
-        }
-
-        .case-study-circle-left__text {
-            rotate: -180deg;
-            transition: rotate 1s;
-            animation: text-left 2s forwards;
-        }
-
-        @keyframes move-left {
-            from {transform: translateX(0);}
-            to {transform: translateX(-150px);}
-        }
-
-        @keyframes text-left {
-            0% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 0;
-                transform: translateX(400px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(290px);
-            }
-        }
-    }
-}
-
-.case-study__image {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        height: 80%;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .case-study {
-        grid-template-columns: 20px auto 20px;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .case-study {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .case-study__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 2% 0;
+    max-width: 100%;
 
     .case-study__text {
-        padding: 20px 20px;
-        width: 100%;
-        align-items: center;
+        padding: 0 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: 'SourceSansPro-Bold';
+        max-width: 100%;
+        overflow: hidden;
+    
+        h2 {
+            font-size: 4rem;
+        }
+    
+        h3 {
+            padding-top: 5px;
+            font-size: 1.5rem;
+    
+        }
+    
+        p {
+            padding-top: 1rem;
+            font-size: 1.5rem;
+            font-family: 'SourceSansPro-Light';
+        }
+    
+        a {
+            display: flex;
+            align-items: center;
+    
+            p {
+                margin-bottom: 18px;
+                margin-left: 10px;
+            }
+        }
+    
+        a.left {
+            justify-content: end;
+        }
+    }
+    
+    .case-study__text-left {
+        grid-column: 1 / 2;
+    }
+    
+    .case-study__text-right {
+        grid-column: 2 / 3;
+    }
+
+    .case-study__image {
+        text-align: center;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+        }
+    }
+    
+    .case-study__image-right {
+        grid-column: 2 / 3;
+    }
+    
+    .case-study__image-left {
+        grid-column: 1 / 2;
+    }    
+}
+
+@media screen and (max-width: 760px) {
+    .case-study__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .case-study__text {
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            a {
+                padding-bottom: 20px;
+            }
+        }
+
+        .case-study__image {
+            padding: 20px;
+
+            img {
+                width: 80%;
+            }
+        }
     }
 }
