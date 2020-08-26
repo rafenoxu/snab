@@ -1,41 +1,38 @@
+.arrow-link {
+    position: relative;
+}
+
 .arrow-down-circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     border: 2px solid #47bcc3;
     border-radius: 50%;
     border-top-color: transparent;
     width: 100px;
     height: 100px;
-    margin-top: 7vh;
+    background-color: transparent;
+    overflow: hidden;
 }
 
-.arrow-down-circle:hover {
-    animation: spin 1s forwards;
+.arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 38px;
+    pointer-events: none;
+}
 
-    img {
-        rotate: -180deg;
-        transition: rotate 1s;
-        animation: 1s move-down 1s forwards;
-    }
+a:hover .arrow-down-circle {
+    animation: spin 1s forwards;
 
     @keyframes spin {
         from {transform:rotate(0deg);}
         to {transform:rotate(180deg);}
     }
+}
 
-    @keyframes spin-back {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(-180deg);}
-    }
+a:hover .arrow {
+    animation: 1s move-down 1s forwards;
 
     @keyframes move-down {
         from {transform: translateY(0);}
         to {transform: translateY(35px);}
     }
-}
-
-.team-circle {
-    margin-top: 120px;
 }

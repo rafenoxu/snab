@@ -1,85 +1,61 @@
 .case-study {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
     background-color: #f9f9f9;
-    max-width: 100%;
     padding: 2%;
 }
   
 .case-study__content {
     display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 2% 0;
-    max-width: 100%;
+    grid-column: 2 / 3;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: inherit;
 
     .case-study__text {
-        padding: 0 10%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: flex-start;
         font-family: 'SourceSansPro-Bold';
-        max-width: 100%;
-        overflow: hidden;
     
         h2 {
             font-size: 4rem;
         }
     
         h3 {
-            padding-top: 5px;
+            padding: 5px 0 15px 0;
             font-size: 1.5rem;
     
         }
     
         p {
-            padding-top: 1rem;
             font-size: 1.5rem;
             font-family: 'SourceSansPro-Light';
-        }
-    
-        a {
-            display: flex;
-            align-items: center;
-    
-            p {
-                margin-bottom: 18px;
-                margin-left: 10px;
-            }
-        }
-    
-        a.left {
-            justify-content: end;
+            padding-bottom: 50px;
         }
     }
-    
-    .case-study__text-left {
-        grid-column: 1 / 2;
-    }
-    
-    .case-study__text-right {
-        grid-column: 2 / 3;
+
+    .case-study__text.right {
+        order: 2;
+        
+        .arrow-link {
+            align-self: flex-end;
+        }
     }
 
     .case-study__image {
         text-align: center;
         overflow: hidden;
-
-        img {
-            height: 100%;
-        }
     }
-    
-    .case-study__image-right {
-        grid-column: 2 / 3;
-    }
-    
-    .case-study__image-left {
-        grid-column: 1 / 2;
-    }    
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1024px) {
+    .case-study {
+        grid-template-columns: 5% auto 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .case-study__content {
         display: flex;
         flex-wrap: wrap;
