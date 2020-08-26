@@ -5,6 +5,10 @@
     background-color: #f9f9f9;
     max-width: 100%;
     padding: 2%;
+
+    img {
+        object-fit: scale-down;
+    }
 }
   
 .case-study__content {

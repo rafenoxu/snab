@@ -300,6 +300,17 @@ header.opened .nav {
 }
 
 .about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  justify-items: center;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
@@ -318,13 +329,9 @@ header.opened .nav {
 }
 
 .about__content p {
-  padding: 10px;
+  padding: 10px 10px 100px 10px;
   line-height: 1.5;
   font-size: 1.5rem;
-}
-
-.about__content a {
-  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 700px) {
@@ -352,6 +359,11 @@ header.opened .nav {
   background-color: #f9f9f9;
   max-width: 100%;
   padding: 2%;
+}
+
+.case-study img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .case-study__content {
@@ -765,6 +777,7 @@ header.opened .nav {
 .team p {
   font-family: 'SourceSansPro-ExtraLight';
   font-size: 3rem;
+  padding-bottom: 100px;
 }
 
 @media screen and (max-width: 700px) {
@@ -773,7 +786,6 @@ header.opened .nav {
   }
   .team p {
     font-size: 1.2rem;
-    padding-top: 10px;
   }
 }
 
@@ -1063,39 +1075,23 @@ footer .footer__social-media-icons .hexagon:hover:before {
   border-bottom: 7px solid #47bcc3;
 }
 
+.arrow-link {
+  position: relative;
+}
+
 .arrow-down-circle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   border: 2px solid #47bcc3;
   border-radius: 50%;
   border-top-color: transparent;
   width: 100px;
   height: 100px;
-  margin-top: 7vh;
+  background-color: transparent;
+  overflow: hidden;
 }
 
-.arrow-down-circle:hover {
+a:hover .arrow-down-circle {
   -webkit-animation: spin 1s forwards;
           animation: spin 1s forwards;
-}
-
-.arrow-down-circle:hover img {
-  rotate: -180deg;
-  -webkit-transition: rotate 1s;
-  transition: rotate 1s;
-  -webkit-animation: 1s move-down 1s forwards;
-          animation: 1s move-down 1s forwards;
 }
 
 @keyframes spin {
@@ -1109,26 +1105,16 @@ footer .footer__social-media-icons .hexagon:hover:before {
   }
 }
 
-@-webkit-keyframes spin-back {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
+.arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 38px;
+  pointer-events: none;
 }
 
-@keyframes spin-back {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
+a:hover .arrow {
+  -webkit-animation: 1s move-down 1s forwards;
+          animation: 1s move-down 1s forwards;
 }
 
 @-webkit-keyframes move-down {
@@ -1151,9 +1137,5 @@ footer .footer__social-media-icons .hexagon:hover:before {
     -webkit-transform: translateY(35px);
             transform: translateY(35px);
   }
-}
-
-.team-circle {
-  margin-top: 120px;
 }
 /*# sourceMappingURL=main.css.map */
