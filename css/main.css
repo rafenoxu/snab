@@ -799,6 +799,7 @@ a:hover .circle-text.left {
   margin-top: 5vh;
   margin: 50px auto;
   padding: 10px;
+  cursor: default;
 }
 
 .contact__header a .shape {
