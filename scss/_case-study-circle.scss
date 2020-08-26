@@ -1,55 +1,65 @@
 .case-study-circle {
-    display: flex;
+    position: relative;
     border: 2px solid #47bcc3;
     border-radius: 50%;
     border-left-color: transparent;
     width: 100px;
     height: 100px;
-    margin-top: 50px;
-
-    &__text {
-        white-space: nowrap;
-
-        p {
-            position: relative;
-            top: 20px;
-            left: 40px;
-            color: black;
-        }
-    }
-
-    &__arrow {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        overflow: visible;
-    }
 }
 
-.case-study-circle:hover {
+.case-study-circle.left {
+    border-left-color: #47bcc3;
+    border-right-color: transparent;
+}
+
+.right-arrow {
+    position: absolute;
+    left: 20px;
+    top: 40px;
+}
+
+.circle-text {
+    color: $primary-color;
+    white-space: nowrap;
+    position: absolute;
+    left: 120px;
+    top: 38px;
+}
+
+.circle-text.left {
+    left: -170px;
+    top: 38px;
+}
+
+a:hover .case-study-circle {
     animation: spin 1s forwards;
 
     @keyframes spin {
         from {transform:rotate(0deg);}
         to {transform:rotate(180deg);}
     }
+}
 
-    .case-study-circle__arrow {
-        rotate: -180deg;
-        transition: rotate 1s;
-        animation: 1s move-right 1s forwards;
-    }
-
-    .case-study-circle__text {
-        rotate: -180deg;
-        transition: rotate 1s;
-        animation: text-right 2s forwards;
-    }
+a:hover .right-arrow {
+    animation: 1s move-right 1s forwards;
 
     @keyframes move-right {
         from {transform: translateX(0);}
-        to {transform: translateX(150px);}
+        to {transform: translateX(160px);}
     }
+}
+
+a:hover .right-arrow.left {
+    animation-name: move-left;
+    
+    @keyframes move-left {
+        from {transform: translateX(0);}
+        to {transform: translateX(-170px);}
+    }
+}
+
+a:hover .circle-text {
+    animation: 2s text-right forwards;
 
     @keyframes text-right {
         0% {
@@ -57,70 +67,17 @@
         }
         50% {
             opacity: 0;
-            transform: translateX(0);
+            transform: translateX(-200px);
         }
         100% {
             opacity: 100;
-            transform: translateX(100px);
+            transform: translateX(-100px);
         }
     }
 }
 
-.case-study-circle-left {
-    display: flex;
-    border: 2px solid #47bcc3;
-    border-radius: 50%;
-    border-right-color: transparent;
-    width: 100px;
-    height: 100px;
-    margin-top: 50px;
-
-    &__text {
-        white-space: nowrap;
-
-        p {
-            font-family: 'SourceSansPro-Light';
-            position: relative;
-            top: 18px;
-            left: -240px;
-            color: black;
-        }
-    }
-
-    &__arrow {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        overflow: visible;
-        position: relative;
-        left: 35px;
-    }
-}
-
-.case-study-circle-left:hover {
-    animation: spin 1s forwards;
-
-    @keyframes spin {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(-180deg);}
-    }
-
-    .case-study-circle-left__arrow {
-        rotate: -180deg;
-        transition: rotate 1s;
-        animation: 1s move-left 1s forwards;
-    }
-
-    .case-study-circle-left__text {
-        rotate: -180deg;
-        transition: rotate 1s;
-        animation: text-left 2s forwards;
-    }
-
-    @keyframes move-left {
-        from {transform: translateX(0);}
-        to {transform: translateX(-150px);}
-    }
+a:hover .circle-text.left {
+    animation-name: text-left;
 
     @keyframes text-left {
         0% {
@@ -128,11 +85,11 @@
         }
         50% {
             opacity: 0;
-            transform: translateX(350px);
+            transform: translateX(200px);
         }
         100% {
-            opacity: 1;
-            transform: translateX(280px);
+            opacity: 100;
+            transform: translateX(100px);
         }
     }
 }

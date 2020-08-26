@@ -12,6 +12,13 @@
     overflow: hidden;
 }
 
+.arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 38px;
+    pointer-events: none;
+}
+
 a:hover .arrow-down-circle {
     animation: spin 1s forwards;
 
@@ -19,13 +26,6 @@ a:hover .arrow-down-circle {
         from {transform:rotate(0deg);}
         to {transform:rotate(180deg);}
     }
-}
-
-.arrow {
-    position: absolute;
-    bottom: 20px;
-    left: 38px;
-    pointer-events: none;
 }
 
 a:hover .arrow {
