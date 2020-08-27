@@ -556,6 +556,7 @@ a:hover .arrow {
   position: absolute;
   left: 120px;
   top: 38px;
+  pointer-events: none;
 }
 
 .circle-text.left {
