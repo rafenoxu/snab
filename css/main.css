@@ -128,15 +128,12 @@ body {
 }
 
 header {
-  height: 150px;
+  height: 100px;
   width: 100%;
-  padding: 2vw;
+  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -191,7 +188,7 @@ header .menu-toggle:focus {
 
 header .nav {
   position: fixed;
-  top: 150px;
+  top: 100px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -279,8 +276,7 @@ header.opened .nav {
     visibility: visible;
     opacity: 1;
     position: static;
-    display: block;
-    height: 100%;
+    height: 70%;
   }
   header .nav .menu-nav {
     -webkit-box-orient: horizontal;
@@ -373,9 +369,9 @@ header.opened .nav {
   pointer-events: none;
 }
 
-a:hover .arrow-down-circle {
-  -webkit-animation: spin 1s forwards;
-          animation: spin 1s forwards;
+.arrow-down-circle-animation {
+  -webkit-animation: 1s spin forwards;
+          animation: 1s spin forwards;
 }
 
 @-webkit-keyframes spin {
@@ -400,7 +396,7 @@ a:hover .arrow-down-circle {
   }
 }
 
-a:hover .arrow {
+.arrow-down-animation {
   -webkit-animation: 1s move-down 1s forwards;
           animation: 1s move-down 1s forwards;
 }
@@ -477,6 +473,7 @@ a:hover .arrow {
   font-size: 1.5rem;
   font-family: 'SourceSansPro-Light';
   padding-bottom: 50px;
+  text-align: justify;
 }
 
 .case-study__content .case-study__text.right {
@@ -488,11 +485,23 @@ a:hover .arrow {
 .case-study__content .case-study__text.right .arrow-link {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .case-study__content .case-study__image {
   text-align: center;
-  overflow: hidden;
+}
+
+.case-study__content .case-study__image img {
+  -webkit-transition: 2s linear;
+  transition: 2s linear;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
 }
 
 @media screen and (max-width: 1024px) {
@@ -530,6 +539,20 @@ a:hover .arrow {
   }
 }
 
+.blur-1 {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.blur-2 {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+.case-link {
+  width: 280px;
+}
+
 .case-study-circle {
   position: relative;
   border: 2px solid #47bcc3;
@@ -550,6 +573,10 @@ a:hover .arrow {
   top: 40px;
 }
 
+.right-arrow.left {
+  left: 200px;
+}
+
 .circle-text {
   color: #000;
   white-space: nowrap;
@@ -560,11 +587,11 @@ a:hover .arrow {
 }
 
 .circle-text.left {
-  left: -170px;
+  left: 0px;
   top: 38px;
 }
 
-a:hover .case-study-circle {
+.case-study-circle-animation {
   -webkit-animation: spin 1s forwards;
           animation: spin 1s forwards;
 }
@@ -580,7 +607,7 @@ a:hover .case-study-circle {
   }
 }
 
-a:hover .right-arrow {
+.right-arrow-animation {
   -webkit-animation: 1s move-right 1s forwards;
           animation: 1s move-right 1s forwards;
 }
@@ -607,7 +634,7 @@ a:hover .right-arrow {
   }
 }
 
-a:hover .right-arrow.left {
+.right-arrow-animation.left {
   -webkit-animation-name: move-left;
           animation-name: move-left;
 }
@@ -618,8 +645,8 @@ a:hover .right-arrow.left {
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(-170px);
-            transform: translateX(-170px);
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
   }
 }
 
@@ -629,49 +656,43 @@ a:hover .right-arrow.left {
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(-170px);
-            transform: translateX(-170px);
+    -webkit-transform: translateX(-180px);
+            transform: translateX(-180px);
   }
 }
 
-a:hover .circle-text {
-  -webkit-animation: 2s text-right forwards;
-          animation: 2s text-right forwards;
+.circle-text-animation {
+  -webkit-animation: 2s text-right 1s forwards;
+          animation: 2s text-right 1s forwards;
 }
 
 @-webkit-keyframes text-right {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    -webkit-transform: translateX(-98px);
+            transform: translateX(-98px);
   }
   100% {
-    opacity: 100;
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    opacity: 1;
+    -webkit-transform: translateX(-98px);
+            transform: translateX(-98px);
   }
 }
 
 @keyframes text-right {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
+    -webkit-transform: translateX(-98px);
+            transform: translateX(-98px);
   }
   100% {
-    opacity: 100;
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    opacity: 1;
+    -webkit-transform: translateX(-98px);
+            transform: translateX(-98px);
   }
 }
 
-a:hover .circle-text.left {
+.circle-text-animation.left {
   -webkit-animation-name: text-left;
           animation-name: text-left;
 }
@@ -679,14 +700,11 @@ a:hover .circle-text.left {
 @-webkit-keyframes text-left {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
   }
   100% {
-    opacity: 100;
+    opacity: 1;
     -webkit-transform: translateX(100px);
             transform: translateX(100px);
   }
@@ -695,14 +713,11 @@ a:hover .circle-text.left {
 @keyframes text-left {
   0% {
     opacity: 0;
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
   }
   100% {
-    opacity: 100;
+    opacity: 1;
     -webkit-transform: translateX(100px);
             transform: translateX(100px);
   }
@@ -713,6 +728,7 @@ a:hover .circle-text.left {
   width: 100%;
   background-image: url(../images/team.png);
   background-position: center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

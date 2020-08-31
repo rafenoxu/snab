@@ -1,12 +1,12 @@
-$header-height: 150px;
+$header-height: 100px;
 $menu-link-size: 20px;
 
 header {
     height: $header-height;
     width: 100%;
-    padding: 2vw;
+    padding: 30px;
     display: flex;
-    align-items: center;
+    //align-items: center;
     justify-content: space-between;
 
     .logo {
@@ -137,8 +137,7 @@ header.opened {
             visibility: visible;
             opacity: 1;
             position: static;
-            display: block;
-            height: 100%;
+            height: 70%;
 
             .menu-nav {
                 flex-direction: row;

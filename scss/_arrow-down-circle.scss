@@ -19,8 +19,8 @@
     pointer-events: none;
 }
 
-a:hover .arrow-down-circle {
-    animation: spin 1s forwards;
+.arrow-down-circle-animation {
+    animation: 1s spin forwards;
 
     @keyframes spin {
         from {transform:rotate(0deg);}
@@ -28,7 +28,7 @@ a:hover .arrow-down-circle {
     }
 }
 
-a:hover .arrow {
+.arrow-down-animation {
     animation: 1s move-down 1s forwards;
 
     @keyframes move-down {
