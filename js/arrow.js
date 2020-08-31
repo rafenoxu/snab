@@ -1,7 +1,5 @@
 const arrow_links = document.getElementsByClassName('arrow-link');
 
-console.log(arrow_links);
-
 for (let i = 0; i < arrow_links.length; i++) {
     arrow_links[i].addEventListener('mouseover', function(e) {
         const arrow_down_circle = arrow_links[i].querySelector('.arrow-down-circle');

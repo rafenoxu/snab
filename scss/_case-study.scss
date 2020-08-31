@@ -25,13 +25,13 @@
         h3 {
             padding: 5px 0 15px 0;
             font-size: 1.5rem;
-    
         }
     
         p {
             font-size: 1.5rem;
             font-family: 'SourceSansPro-Light';
             padding-bottom: 50px;
+            text-align: justify;
         }
     }
 
@@ -47,7 +47,11 @@
 
     .case-study__image {
         text-align: center;
-        overflow: hidden;
+
+        img {
+            transition: 2s linear;
+            filter: blur(8px);
+        }
     }
 }
 
@@ -85,4 +89,12 @@
             }
         }
     }
+}
+
+.blur-1 {
+    filter: blur(5px);
+}
+
+.blur-2 {
+    filter: blur(10px);
 }
