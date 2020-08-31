@@ -128,15 +128,12 @@ body {
 }
 
 header {
-  height: 150px;
+  height: 100px;
   width: 100%;
-  padding: 2vw;
+  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -191,7 +188,7 @@ header .menu-toggle:focus {
 
 header .nav {
   position: fixed;
-  top: 150px;
+  top: 100px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -279,8 +276,7 @@ header.opened .nav {
     visibility: visible;
     opacity: 1;
     position: static;
-    display: block;
-    height: 100%;
+    height: 70%;
   }
   header .nav .menu-nav {
     -webkit-box-orient: horizontal;
@@ -373,9 +369,9 @@ header.opened .nav {
   pointer-events: none;
 }
 
-a:hover .arrow-down-circle {
-  -webkit-animation: spin 1s forwards;
-          animation: spin 1s forwards;
+.arrow-down-circle-animation {
+  -webkit-animation: 1s spin forwards;
+          animation: 1s spin forwards;
 }
 
 @-webkit-keyframes spin {
@@ -400,7 +396,7 @@ a:hover .arrow-down-circle {
   }
 }
 
-a:hover .arrow {
+.arrow-down-animation {
   -webkit-animation: 1s move-down 1s forwards;
           animation: 1s move-down 1s forwards;
 }
@@ -564,7 +560,7 @@ a:hover .arrow {
   top: 38px;
 }
 
-a:hover .case-study-circle {
+.case-study-circle-animation {
   -webkit-animation: spin 1s forwards;
           animation: spin 1s forwards;
 }
@@ -580,7 +576,7 @@ a:hover .case-study-circle {
   }
 }
 
-a:hover .right-arrow {
+.right-arrow-animation {
   -webkit-animation: 1s move-right 1s forwards;
           animation: 1s move-right 1s forwards;
 }
@@ -607,7 +603,7 @@ a:hover .right-arrow {
   }
 }
 
-a:hover .right-arrow.left {
+.right-arrow-animation.left {
   -webkit-animation-name: move-left;
           animation-name: move-left;
 }
@@ -634,7 +630,7 @@ a:hover .right-arrow.left {
   }
 }
 
-a:hover .circle-text {
+.circle-text-animation {
   -webkit-animation: 2s text-right forwards;
           animation: 2s text-right forwards;
 }
@@ -671,7 +667,7 @@ a:hover .circle-text {
   }
 }
 
-a:hover .circle-text.left {
+.circle-text-animation.left {
   -webkit-animation-name: text-left;
           animation-name: text-left;
 }

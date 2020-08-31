@@ -32,7 +32,7 @@
     top: 38px;
 }
 
-a:hover .case-study-circle {
+.case-study-circle-animation {
     animation: spin 1s forwards;
 
     @keyframes spin {
@@ -41,7 +41,7 @@ a:hover .case-study-circle {
     }
 }
 
-a:hover .right-arrow {
+.right-arrow-animation {
     animation: 1s move-right 1s forwards;
 
     @keyframes move-right {
@@ -50,7 +50,7 @@ a:hover .right-arrow {
     }
 }
 
-a:hover .right-arrow.left {
+.right-arrow-animation.left {
     animation-name: move-left;
     
     @keyframes move-left {
@@ -59,7 +59,7 @@ a:hover .right-arrow.left {
     }
 }
 
-a:hover .circle-text {
+.circle-text-animation {
     animation: 2s text-right forwards;
 
     @keyframes text-right {
@@ -77,7 +77,7 @@ a:hover .circle-text {
     }
 }
 
-a:hover .circle-text.left {
+.circle-text-animation.left {
     animation-name: text-left;
 
     @keyframes text-left {
