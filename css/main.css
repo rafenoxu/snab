@@ -498,8 +498,8 @@ header.opened .nav {
 }
 
 .case-study__content .case-study__image img {
-  -webkit-transition: 2s linear;
-  transition: 2s linear;
+  -webkit-transition: 1.5s linear;
+  transition: 1.5s linear;
   -webkit-filter: blur(8px);
           filter: blur(8px);
 }
@@ -822,7 +822,7 @@ header.opened .nav {
 .contact__header a .shape {
   stroke-dasharray: 140 540;
   stroke-dashoffset: -474;
-  stroke-width: 12px;
+  stroke-width: 4px;
   fill: transparent;
   stroke: #47bcc3;
   border-bottom: 5px solid #47bcc3;
@@ -861,7 +861,6 @@ header.opened .nav {
 }
 
 .contact__icons .contact__phone {
-  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -869,9 +868,9 @@ header.opened .nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 50px;
 }
 
@@ -882,11 +881,9 @@ header.opened .nav {
 
 .contact__icons .contact__phone p {
   padding-top: 20px;
-  text-align: center;
 }
 
 .contact__icons .contact__mail {
-  width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -894,9 +891,11 @@ header.opened .nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   margin-left: 50px;
 }
 
@@ -909,7 +908,6 @@ header.opened .nav {
 
 .contact__icons .contact__mail p {
   padding-top: 20px;
-  text-align: center;
 }
 
 @media screen and (max-width: 700px) {

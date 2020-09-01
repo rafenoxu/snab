@@ -38,7 +38,7 @@
             .shape {
                 stroke-dasharray: 140 540;
                 stroke-dashoffset: -474;
-                stroke-width: 12px;
+                stroke-width: 4px;
                 fill: transparent;
                 stroke: $secondary-color;
                 border-bottom: 5px solid $secondary-color;
@@ -73,10 +73,9 @@
         padding-top: 50px;
 
         .contact__phone {
-            width: 40%;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            align-items: center;
             margin-right: 50px;
 
             img {
@@ -86,15 +85,14 @@
 
             p {
                 padding-top: 20px;
-                text-align: center;
             }
         }
 
         .contact__mail {
-            width: 40%;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            align-content: flex-start;
             margin-left: 50px;
 
             img {
@@ -105,7 +103,6 @@
 
             p {
                 padding-top: 20px;
-                text-align: center;
             }
         }
     }
