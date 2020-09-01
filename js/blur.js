@@ -1,7 +1,7 @@
 const images = document.querySelectorAll('.case-study__image > img');
 
 const config = {
-    threshold: 0.8
+    threshold: 0.7
 }
 
 observer = new IntersectionObserver(entries => {
