@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: 'SourceSansPro-Black';
     src: url('../fonts/SourceSansPro-Black.otf')
          format('opentype');
@@ -8,26 +8,28 @@
     font-family: 'SourceSansPro-BlackIt';
     src: url('../fonts/SourceSansPro-BlackIt.otf')
          format('opentype');
-}
+}*/
 
 @font-face {
     font-family: 'SourceSansPro-Bold';
     src: url('../fonts/SourceSansPro-Bold.otf')
          format('opentype');
+    font-display: swap;
 }
-
+/*
 @font-face {
     font-family: 'SourceSansPro-BoldIt';
     src: url('../fonts/SourceSansPro-BoldIt.otf')
          format('opentype');
 }
-
+*/
 @font-face {
     font-family: 'SourceSansPro-ExtraLight';
     src: url('../fonts/SourceSansPro-ExtraLight.otf')
          format('opentype');
+    font-display: swap;
 }
-
+/*
 @font-face {
     font-family: 'SourceSansPro-ExtraLightIt';
     src: url('../fonts/SourceSansPro-ExtraLightIt.otf')
@@ -39,25 +41,27 @@
     src: url('../fonts/SourceSansPro-It.otf')
          format('opentype');
 }
-
+*/
 @font-face {
     font-family: 'SourceSansPro-Light';
     src: url('../fonts/SourceSansPro-Light.otf')
          format('opentype');
+    font-display: swap;
 }
-
+/*
 @font-face {
     font-family: 'SourceSansPro-LightIt';
     src: url('../fonts/SourceSansPro-LightIt.otf')
          format('opentype');
 }
-
+*/
 @font-face {
     font-family: 'SourceSansPro-Regular';
     src: url('../fonts/SourceSansPro-Regular.otf')
          format('opentype');
+    font-display: swap;
 }
-
+/*
 @font-face {
     font-family: 'SourceSansPro-Semibold';
     src: url('../fonts/SourceSansPro-Semibold.otf')
@@ -69,3 +73,4 @@
     src: url('../fonts/SourceSansPro-SemiboldIt.otf')
          format('opentype');
 }
+*/
