@@ -190,6 +190,7 @@ main {
 .result {
   text-align: center;
   padding: 10% 0;
+  background-color: #f9f9f9;
 }
 
 .result img {
