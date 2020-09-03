@@ -1,0 +1,90 @@
+@import 'variables';
+@import 'fonts';
+
+main {
+    font-family: 'SourceSansPro-Regular';
+}
+
+.title {
+    min-height: calc(100vh - 100px);
+    background-color: $primary-color;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    .title-text {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-weight: bolder;
+            font-size: 7rem;
+            text-align: start;
+            padding: 10%;
+        }
+    }
+}
+
+.case {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .case-about {
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+
+        .case-about-text {
+            padding: 10%;
+            letter-spacing: 2px;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: bolder;
+            }
+
+            p {
+                padding-top: 20px;
+                text-align: justify;
+            }
+        }
+    }
+
+    .case-about.reverse {
+        order: 2;
+    }
+
+    .case-image {
+        background-color: orange;
+    }
+
+    .case-image.reverse {
+        order: 1;
+    }
+}
+
+.product-image {
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    font-size: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result {
+    text-align: center;
+    padding: 10% 0;
+    background-color: $case-study-background-color;
+
+    img {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+    
