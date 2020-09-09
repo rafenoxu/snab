@@ -1,0 +1,44 @@
+{
+  "name": "gif-player",
+  "description": "Controllable animated GIFs",
+  "authors": [
+    "Simon Green <simon@captaincodeman.com>"
+  ],
+  "main": "gif-player.html",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/github.com/CaptainCodeman/gif-player.git"
+  },
+  "homepage": "http://captaincodeman.github.io/gif-player/",
+  "keywords": [
+    "web-components",
+    "img",
+    "image",
+    "gif",
+    "animated",
+    "player"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+  },
+  "resolutions": {
+    "polymer": "^2.0.0"
+  },
+  "license": "MIT",
+  "version": "0.0.2",
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "8a0bf421cb559f3144538ac28d9dbb91fa7543cc"
+  },
+  "_source": "https://github.com/CaptainCodeman/gif-player.git",
+  "_target": "0.0.2",
+  "_originalSource": "CaptainCodeman/gif-player",
+  "_direct": true
+}
